@@ -63,6 +63,15 @@ submit.addEventListener('submit', searchMeal);
 mealsEl.addEventListener('click', e => {
   const path = e.path || (e.composedPath && e.composedPath());
   const mealInfo = path.find(item => {
-  console.log(item);
+    if (item.classList) {
+      return item.classList.contains('meal-info');
+    } else {
+      false;
+    }
   });
+
+  if (mealInfo) {
+    const mealID = mealInfo.getAttribute('data-mealID');
+    getMealById(mealID);
+  }
 });
