@@ -1,5 +1,6 @@
 // Get DOM elements
 const search = document.getElementById('search');
+search.focus();
 const submit = document.getElementById('submit');
 const random = document.getElementById('random');
 const mealsEl = document.getElementById('meals');
