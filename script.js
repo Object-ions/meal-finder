@@ -59,4 +59,10 @@ function removeMessage() {
 }
 
 // Event listeners
-submit.addEventListener('submit', searchMeal)
+submit.addEventListener('submit', searchMeal);
+mealsEl.addEventListener('click', e => {
+  const path = e.path || (e.composedPath && e.composedPath());
+  const mealInfo = path.find(item => {
+  console.log(item);
+  });
+});
