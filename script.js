@@ -121,6 +121,8 @@ mealsEl.addEventListener('click', e => {
   const path = e.path || (e.composedPath && e.composedPath());
   const mealInfo = path.find(item => {
     if (item.classList) {
+      mealsEl.innerHTML = '';
+      resultsHeading.innerHTML = '';
       return item.classList.contains('meal-info');
     } else {
       false;
